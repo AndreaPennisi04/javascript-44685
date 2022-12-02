@@ -8824,9 +8824,17 @@ div.gallery ul li img:hover {
   text-align: center;
   margin: 20px; }
 
-.contenedor_principa {
+.contenedor_principa .contenedor_principa_wrapper {
   margin: 10px;
   padding: 15px; }
+
+.segundo_titulo-simulador-textura {
+  padding-bottom: 10px; }
+
+.cotizador_button {
+  padding-bottom: 10px;
+  align-items: center;
+  text-align: center; }
 
 .breadcrumb {
   display: inline-block;

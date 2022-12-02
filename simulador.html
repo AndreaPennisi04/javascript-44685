@@ -94,14 +94,14 @@
       </div>
     </div>
       <!-- Shopping -->
-
+      <div class="contenedor_principa">
       <h1 id="titulo">Cotizador</h1>
-      <div class="row">
+      <div class="row contenedor_principa_wrapper">
         <div class="col-md-6">
    
           <form>
             <!-- Cantidad de asientos -->
-            <div class="simulador_segundo_titulo">
+            <div class="simulador_primer_titulo">
             <h2>Cantidad de asientos</h2>
           </div>
             <label for="cars">Seleccione Cantidad de asientos</label>
@@ -112,9 +112,10 @@
               <option value="7">7</option>
             </select>
             <!-- tapizado section -->
-            <div class="simulador_segundo_titulo">
+            <div class="segundo_titulo-simulador" style="padding: 10px 0px;">
             <h2>Tipo de tapizado</h2>
-          </div>
+            </div>
+            <div class="segundo_titulo-simulador-textura">
             <label for="cars">Textura</label>
             <select
               class="form-select w-50"
@@ -130,6 +131,8 @@
               <option value="combinado">Combinado</option>
               <option value="cuerina">Cuerina</option>
             </select>
+            </div>
+            
             <!-- Color de tapizado -->
             <label for="cars">Color de tapizado</label>
             <select
@@ -237,9 +240,8 @@
           </ul>
         </div>
       </div>
-
-  
     <!-- Submit button -->
+    <div class="cotizador_button">
     <button
     type="button"
     class="btn btn-secondary"
@@ -247,7 +249,8 @@
   >
     Calcular
   </button>
-
+</div>
+</div>
     <!-- Inicio footer -->
     <footer class="container-fluid">
       <div class="footer-logo bs-primary">

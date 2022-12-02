@@ -65,16 +65,16 @@ let nombreIngresado   = "";
 let apellidoIngresado = "";
 
 
-// do {
-//     nombreIngresado   = prompt("Ingresar nombre");
-//     apellidoIngresado = prompt("Ingresar apellido");
-//     if((nombreIngresado !="") && (apellidoIngresado !="")){
-//         darBienvenida(nombreIngresado+" "+apellidoIngresado); 
-//     }else{
-//         alert("Error: Debe ingresar nombre y apellido");
-//     }
+do {
+    nombreIngresado   = prompt("Ingresar nombre");
+    apellidoIngresado = prompt("Ingresar apellido");
+    if((nombreIngresado !="") && (apellidoIngresado !="")){
+        darBienvenida(nombreIngresado+" "+apellidoIngresado); 
+    }else{
+        alert("Error: Debe ingresar nombre y apellido");
+    }
     
-// } while (nombreIngresado===""||apellidoIngresado==="");
+} while (nombreIngresado===""||apellidoIngresado==="");
 
 
 function hacerPresupuesto() {

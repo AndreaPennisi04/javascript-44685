@@ -1,0 +1,38 @@
+// Include any default variable overrides here (though functions won't be available)
+
+@import './complements/variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// Then add additional custom code here
+
+@import './complements/mixins';
+@import './complements/loop';
+@import './componentes/footer';
+@import './componentes/navbar';
+@import './pages/404';
+@import './pages/contacto';
+@import './pages/galeria';
+@import './pages/index';
+@import './pages/servicios';
+@import './pages/simulador';
+@import './pages/sobrenosotros';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+//   Mobile view
+@include media-breakpoint-up(md) {
+  .title {
+    font-weight: 700;
+    font-size: 5rem;
+  }
+  .sub-title {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .mapa {
+    max-width: 500px;
+  }
+}

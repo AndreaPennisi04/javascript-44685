@@ -1,0 +1,33 @@
+{
+  "name": "git-my-first-proyect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "clear": "rm -rf ./deploy",
+    "build-deploy": "rsync -av --progress ./ ./deploy --exclude node_modules/ --exclude .git/ --exclude package-lock.json --exclude package.json --exclude deploy/ --exclude plantilla.html  --exclude scss/ --exclude .gitignore --exclude .DS_Store",
+    "clear-bucket": "aws-vault exec andrea -- aws s3 rm s3://jpcueros-s3 --recursive",
+    "upload-bucket": "aws-vault exec andrea -- aws s3 cp ./deploy s3://jpcueros-s3 --recursive",
+    "deploy": "npm run build-css && npm run clear && npm run build-deploy && npm run clear-bucket && npm run upload-bucket"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreaPennisi04/My-first-Project-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreaPennisi04/My-first-Project-/issues"
+  },
+  "homepage": "https://github.com/AndreaPennisi04/My-first-Project-#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.3",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.1"
+  }
+}

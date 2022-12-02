@@ -1,0 +1,67 @@
+//   Pagina de contacto
+
+.contact-page-gradients {
+  background: rgb(240, 241, 233);
+  background: radial-gradient(
+    circle,
+    rgba(240, 241, 233, 1) 0%,
+    rgba(200, 203, 197, 1) 45%,
+    rgba(242, 243, 242, 1) 81%,
+    rgba(244, 246, 252, 1) 100%
+  );
+  background-size: auto;
+  background-position: center;
+  width: 100%;
+  padding: 30px;
+}
+
+.container-sm form {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
+
+.contact-page-header {
+  background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0) 2%,
+      rgb(189, 189, 189)
+    ),
+    url('../../imagenes/dsc03888.jpg');
+  background-position: bottom;
+  background-color: #b1b8bd;
+  background-size: cover;
+  height: 500px;
+  background-repeat: no-repeat;
+  &-h2 {
+    margin-top: 30px;
+  }
+}
+.contact-page-title {
+  top: 250px;
+  left: 50px;
+  position: absolute;
+  font-weight: 700;
+  font-size: 4rem;
+  color: rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-page form {
+    width: 100%;
+  }
+  .contact-page-header {
+    height: 250px;
+  }
+  .contact-page-title {
+    top: 150px;
+    left: 20px;
+    position: absolute;
+    font-weight: 700;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+  }
+}

@@ -1,0 +1,58 @@
+//   Sobre Nosotros
+
+.content_sobre-nosotros img {
+  width: 100%;
+}
+.content_sobre-nosotros a {
+  padding: 5px;
+  margin: 5px;
+}
+
+.content {
+  &_sobre-nosotros {
+    text-align: start;
+    text-align: justify;
+    &_header {
+      @include encabezado(
+        '../../imagenes/tapiceria-coche-asientos.jpg',
+        center
+      );
+    }
+    &_main {
+      &_imagen-1 {
+        @include imagen5050('../../imagenes/dueno-de-la-fabrica.jpg', right);
+      }
+      &_imagen-2 {
+        @include imagen5050('../../imagenes/volante-en-marronjpg.jpg', right);
+      }
+      &_imagen-3 {
+        @include imagen5050('../../imagenes/vw.jpg', right);
+      }
+      &_texto-1 {
+        padding: 40px;
+        @media only screen and (max-width: 768px) {
+        }
+      }
+      &_texto-2 {
+        padding: 40px;
+        order: 1;
+        @media only screen and (max-width: 768px) {
+          order: -1;
+        }
+      }
+      &_texto-3 {
+        padding: 40px;
+        @media only screen and (max-width: 768px) {
+        }
+      }
+    }
+    &_titulo {
+      margin-top: 30px;
+    }
+    &_button {
+      margin: 10px;
+      padding: 5px;
+      text-align: center;
+    }
+  }
+}

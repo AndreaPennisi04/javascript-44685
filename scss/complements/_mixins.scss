@@ -1,0 +1,58 @@
+@mixin imagen5050(
+  $url,
+  $background-position: center,
+  $gradient-position: false,
+  $bgColour: white
+) {
+  @if $gradient-position {
+    background: linear-gradient(
+        to $gradient-position,
+        rgba(255, 255, 255, 0) 2%,
+        $bgColour
+      ),
+      url($url);
+  } @else {
+    background-image: url($url);
+  }
+
+  background-repeat: no-repeat;
+  background-position: $background-position;
+  background-size: cover;
+  height: 800px;
+  @media only screen and (max-width: 768px) {
+    background-image: url($url);
+    width: 90vw;
+    height: 200px;
+    margin: 20px;
+  }
+}
+
+@mixin encabezado($url, $bgPosition) {
+  background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0) 5%,
+      rgb(189, 189, 189)
+    ),
+    url($url);
+  background-color: #b1b8bd;
+  background-size: cover;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: $bgPosition;
+  &_page-title {
+    top: 250px;
+    left: 50px;
+    position: absolute;
+    font-weight: 700;
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+    @media only screen and (max-width: 768px) {
+      top: 150px;
+      left: 20px;
+      font-size: 2rem;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    height: 250px;
+  }
+}

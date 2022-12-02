@@ -1,0 +1,28 @@
+  /* Nav bar */
+  .navbar-custom {
+    background-color: grey;
+ &li a {
+    color: white;
+  }
+  }
+.navbar img {
+  border-radius: 15px;
+  a:hover {
+    color: #c1b5b5 !important;
+    outline-style: hidden !important;
+    outline: none !important;
+  }
+}
+
+.navbar-custom {
+  background-color: rgba(68, 68, 68, 0.7);
+  backdrop-filter: blur(12px);
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 99999;
+  width: 100%;
+  li a {
+    color: white;
+  }
+}
+/* Fin Nav bar */

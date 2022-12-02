@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <script defer src="./js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <title>Simulador JavaScript</title>
+  </head>
+
+  <body>
+    <!-- Navbar secction -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a href="/index.html">
+          <img
+            src="./imagenes/resize_122687708_168534678234197_1058013072474963530_n-2-2.jpg"
+            alt="JP Cueros"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html">
+                Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sobreNosotros.html#sobreNosotros">
+                Sobre Nosotros
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./servicios.html#servicios">
+                Servicios
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./galeria.html#galeria">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./simulador.html">
+                Haz tu presupuesto
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary" href="./contactanos.html#Formulario">
+                Contactanos
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Fin del navbar -->
+    <div class="content">
+      <div class="content_servicios-parent">
+        <div class="content_servicios-parent_header-servicios">
+          <div class="content_servicios-parent_header-servicios_page-title">
+            Simulador
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Shopping -->
+
+      <h1 id="titulo">Cotizador</h1>
+      <div class="row">
+        <div class="col-md-6">
+   
+          <form>
+            <!-- Cantidad de asientos -->
+            <div class="simulador_segundo_titulo">
+            <h2>Cantidad de asientos</h2>
+          </div>
+            <label for="cars">Seleccione Cantidad de asientos</label>
+            <select class="form-select w-50" name="asietos" id="asientos">
+              <option value="nada">Seleccione una opcion</option>
+              <option value="2">2</option>
+              <option value="5">5</option>
+              <option value="7">7</option>
+            </select>
+            <!-- tapizado section -->
+            <div class="simulador_segundo_titulo">
+            <h2>Tipo de tapizado</h2>
+          </div>
+            <label for="cars">Textura</label>
+            <select
+              class="form-select w-50"
+              name="tipo de tapizado"
+              id="textura"
+            >
+              <option value="nada">Seleccione una opcion</option>
+              <option value="liso">liso</option>
+              <option value="arrugado">arrugado</option>
+              <option value="poroso">poroso</option>
+              <option value="perforado">perforado</option>
+              <option value="micorPerforado">micro-perforado</option>
+              <option value="combinado">Combinado</option>
+              <option value="cuerina">Cuerina</option>
+            </select>
+            <!-- Color de tapizado -->
+            <label for="cars">Color de tapizado</label>
+            <select
+              class="form-select w-50"
+              name="tipo de color tapizado"
+              id="colorTapizado"
+            >
+              <option value="nada">Seleccione una opcion</option>
+              <option value="negro">Negro</option>
+              <option value="blanco">Blanco</option>
+              <option value="crema">Crema</option>
+              <option value="grafito">Grafito</option>
+              <option value="gris">Gris</option>
+              <option value="combinado">Combinado</option>
+            </select>
+
+            <!-- Costura
+      <h2>Tipo de Costura</h2>
+      <label for="cars">Estilo de costura</label>
+      <select class="form-select w-50" name="estilo de costura" id="estiloDeCostura">
+        <option value="option">Seleccione una opcion</option>
+        <option value="simpleRecta">Simple/ Recta</option>
+        <option value="dobleDobleRecta">Doble/ Doble recta</option>
+        <option value="zigzag">Zigzag</option>
+        <option value="punto">Tejido de punto</option>
+        <option value="otrosEstiloCostura">
+          Otros
+        </option>
+      </select>
+
+      <label for="cars">Color Costura</label>
+      <select class="form-select w-50" name="color costura" id="color costura">
+        <option value="option">Seleccione una opcion</option>
+        <option value="negrosCostura">Negro</option>
+          <option value="blancoCostura">Blanco</option>
+          <option value="cremaCostura">Crema</option>
+          <option value="grafitoCostura">Grafito</option>
+          <option value="grisCostura">Gris</option>
+          <option value="combinadoCostura">Combinado</option>
+          <option value="otrosCostura">
+            Otros
+          </option>
+      </select>
+      <h3>Bordado</h2>
+        <h2>Tipo de Bordado</h2>
+        <label for="cars">Bordado</label>
+        <select class="form-select w-50" name="bordados" id="bordados">
+          <option value="option">Seleccione una opcion</option>
+          <option value="logoDeLaMarca">Logo de la marca</option>
+          <option value="personalizado">Personalizado</option>
+        </select>
+  
+        <label for="cars">Tipo de bordado</label>
+        <select class="form-select w-50" name="tipo de bordado" id="tipo de bordado">
+          <option value="option">Seleccione una opcion</option>
+          <option value="negroBordado">Negro</option>
+          <option value="blancoBordado">Blanco</option>
+          <option value="cremaBordado">Crema</option>
+          <option value="grafitoBordado">Grafito</option>
+          <option value="grisBordado">Gris</option>
+          <option value="combinadoBordado">Combinado</option>
+          <option value="otrosBordado">
+            Otros
+          </option>
+        </select>
+        <label for="cars">Lugar del bordado</label>
+        <select class="form-select w-50" name="posicion de bordado" id="posicion de bordado">
+          <option value="option">Seleccione una opcion</option>
+          <option value="respaldo">Respaldo</option>
+          <option value="apoyaCabeza">Apoya cabeza</option>
+        </select> -->
+        </form>
+      
+      </div>
+          <!-- carrito de compras -->
+         
+        <div class="col-md-6">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Presupuesto</span>
+            <span class="badge badge-secondary badge-pill">3</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li
+              class="list-group-item d-flex justify-content-between lh-condensed"
+            >
+
+              <div>
+                <h6 class="my-0">Sub-total</h6>
+                <small class="text-muted">Precio sin descuento</small>
+              </div>
+              <span class="text-muted">$<span id="sub-total">..</span></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div class="text-success">
+                <h6 class="my-0">Codigo de promocion</h6>
+                <small>Coloque codigo</small>
+                <input type="text" id="cupon"></input>
+              </div>
+              <span class="text-success"><span id="descuento">-</span>%</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (USD)</span>
+              <strong>$<span id="total">..</span></strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+  
+    <!-- Submit button -->
+    <button
+    type="button"
+    class="btn btn-secondary"
+    onclick="hacerPresupuesto()"
+  >
+    Calcular
+  </button>
+
+    <!-- Inicio footer -->
+    <footer class="container-fluid">
+      <div class="footer-logo bs-primary">
+        <a href="/index.html">
+          <img
+            src="./imagenes/resize_122687708_168534678234197_1058013072474963530_n-2-2.jpg"
+            alt="JP Cueros"
+          />
+        </a>
+      </div>
+      <div class="footer-map-section">
+        <h2>Encontranos</h2>
+        <p>
+          <img class="icon" src="./imagenes/location-dot-solid.svg" alt="map" />
+          CABA, Warnes, Argentina
+        </p>
+        <div class="mapa"></div>
+      </div>
+
+      <div class="footer-info">
+        <h2>Informacion general</h2>
+        <p>
+          <img class="icon" src="./imagenes/phone-solid.svg" alt="phone-icon" />
+          Numero de contacto: +54 (911) 5428-3119
+        </p>
+        <p>Dias y Horarios: Lu-Vi de 8:30AM a 6:00PM</p>
+        <p>
+          <img
+            class="icon"
+            src="./imagenes/envelope-regular.svg"
+            alt="email-icon"
+          />
+          Email:
+          <a href="mailto:jorgepennisi@yahoo.com">jorgepennisi@yahoo.com</a>
+        </p>
+        <p>
+          Envianos tu consulta haciendo click aqui
+          <a href="./contactanos.html#Formulario">Ir a pagina de contacto</a>
+        </p>
+        <p>
+          <img
+            class="icon"
+            src="./imagenes/instagram.svg"
+            alt="instagram-icon"
+          />
+          <a
+            href="https://www.instagram.com/jptapizados/?hl=es"
+            target="_blank"
+          >
+            Instagram
+          </a>
+        </p>
+        <p>
+          <img
+            class="icon"
+            src="./imagenes/facebook-f.svg"
+            alt="facebook-icon"
+          />
+          <a href="https://www.facebook.com/JpCueros" target="_blank">
+            Facebook
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+<!-- Prefixfree -->
+<script
+  src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js"
+  type="text/javascript"
+  type="text/javascript"
+></script>

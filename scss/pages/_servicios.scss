@@ -1,0 +1,80 @@
+// Servicios
+
+.gray-background {
+  background-color: $background-light;
+}
+
+.content {
+  &_servicios-parent {
+    &_header-servicios {
+      @include encabezado('../../imagenes/mercedes.jpg', bottom);
+    }
+    &_header-text {
+      text-align: justify;
+      margin: 40px;
+      font-size: 1.2rem;
+    }
+    &_servicios-contenido {
+      text-align: start;
+      text-align: justify;
+      &_texto-1 {
+        padding: 40px;
+        order: 1;
+        @media only screen and (max-width: 768px) {
+          order: -1;
+        }
+      }
+      &_imagen-1 {
+        @include imagen5050(
+          '../../imagenes/upholstery-leather-hides-1024x453.jpg',
+          right,
+          right,
+          white
+        );
+      }
+      &_texto-2 {
+        padding: 40px;
+      }
+      &_imagen-2 {
+        @include imagen5050(
+          '../../imagenes/40733.jpg',
+          right,
+          left,
+          $background-light
+        );
+      }
+      &_texto-3 {
+        padding: 40px;
+        order: 1;
+        @media only screen and (max-width: 768px) {
+          order: -1;
+        }
+      }
+      &_imagen-3 {
+        @include imagen5050(
+          'https://images.news18.com/ibnlive/uploads/2018/09/car-logos2.jpg',
+          left,
+          right,
+          white
+        );
+      }
+      &_texto-4 {
+        padding: 40px;
+      }
+      &_imagen-4 {
+        @include imagen5050(
+          '../../imagenes/soporte-tecnico.jpg',
+          right,
+          left,
+          $background-light
+        );
+      }
+    }
+    &_main-button-service {
+      text-align: center;
+      margin: 20px;
+    }
+  }
+}
+
+// End Servicios

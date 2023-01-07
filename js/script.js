@@ -1,35 +1,29 @@
 const moneda = "USD";
 const precioMetroCuadradoTextura = {
-  liso: 20,
-  arrugado: 30,
-  poroso: 20,
-  perforado: 25,
-  micorPerforado: 35,
-  combinado: 40,
-  cuerina: 10,
+  liso: { precio: 20, label: "Cuero Liso" },
+  arrugado: { precio: 30, label: "Cuero Texturado" },
+  poroso: { precio: 20, label: "Cuero Poroso" },
+  perforado: { precio: 25, label: "Cuero Perforado" },
+  micorPerforado: { precio: 35, label: "Cuero Micro-Perforado" },
+  combinado: { precio: 40, label: "Cuero Combinado" },
+  cuerina: { precio: 10, label: "Cuerina" },
 };
+
+let texturaHTML = Object.keys(precioMetroCuadradoTextura).map((key) => {
+  return `<option value= "${key}" > ${precioMetroCuadradoTextura[key].label}</option>`;
+});
+
+texturaHTML = [
+  `<option value="nada">Seleccione una opcion</option>`,
+  ...texturaHTML,
+];
+
+window.document.getElementById("textura").innerHTML = texturaHTML.join("");
 
 const metrosCuadradosMinimo = 5;
 const metrosCuadradosMaximo = 12;
 const metrosCuadradoPromedioPorAsiento =
   (metrosCuadradosMinimo + metrosCuadradosMaximo) / 2;
-
-function darBienvenida(saludo) {
-  alert("Bienvenido " + saludo + ". Usted esta por hacer un presupuesto");
-}
-
-let nombreIngresado = "";
-let apellidoIngresado = "";
-
-do {
-  nombreIngresado = prompt("Ingresar nombre");
-  apellidoIngresado = prompt("Ingresar apellido");
-  if (nombreIngresado != "" && apellidoIngresado != "") {
-    darBienvenida(nombreIngresado + " " + apellidoIngresado);
-  } else {
-    alert("Error: Debe ingresar nombre y apellido");
-  }
-} while (nombreIngresado === "" || apellidoIngresado === "");
 
 function factorDePrecioPorColor(color) {
   switch (color) {
@@ -142,7 +136,7 @@ function hacerPresupuesto() {
   }
 
   let precioSubTotal =
-    precioMetroCuadradoTextura[textura] *
+    precioMetroCuadradoTextura[textura].precio *
     asientos *
     factorDePrecioPorColor(colorTapizado) *
     metrosCuadradoPromedioPorAsiento *

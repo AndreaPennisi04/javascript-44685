@@ -32,10 +32,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container-fluid">
         <a href="/index.html">
-          <img
-            src="./imagenes/resize_122687708_168534678234197_1058013072474963530_n-2-2.jpg"
-            alt="JP Cueros"
-          />
+          <img src="./imagenes/resize_122687708_168534678234197_1058013072474963530_n-2-2.jpg" alt="JP Cueros" />
         </a>
         <button
           class="navbar-toggler"
@@ -52,32 +49,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./index.html">
-                Inicio
-              </a>
+              <a class="nav-link" aria-current="page" href="./index.html"> Inicio </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./sobreNosotros.html#sobreNosotros">
-                Sobre Nosotros
-              </a>
+              <a class="nav-link" href="./sobreNosotros.html#sobreNosotros"> Sobre Nosotros </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./servicios.html#servicios">
-                Servicios
-              </a>
+              <a class="nav-link" href="./servicios.html#servicios"> Servicios </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./galeria.html#galeria">Galeria</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./simulador.html">
-                Haz tu presupuesto
-              </a>
+              <a class="nav-link" href="./simulador.html"> Haz tu presupuesto </a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-primary" href="./contactanos.html#Formulario">
-                Contactanos
-              </a>
+              <a class="btn btn-primary" href="./contactanos.html#Formulario"> Contactanos </a>
             </li>
           </ul>
         </div>
@@ -87,9 +74,7 @@
     <div class="content">
       <div class="content_servicios-parent">
         <div class="content_servicios-parent_header-servicios">
-          <div class="content_servicios-parent_header-servicios_page-title">
-            Simulador
-          </div>
+          <div class="content_servicios-parent_header-servicios_page-title">Simulador</div>
         </div>
       </div>
     </div>
@@ -104,12 +89,13 @@
               <h2>Cantidad de asientos</h2>
             </div>
             <label for="cars">Seleccione Cantidad de asientos</label>
-            <select class="form-select w-50" name="asietos" id="asientos">
+            <select class="form-select w-50" name="asietos" id="asientos" onchange="limpiarValidacion('asientos')">
               <option value="nada">Seleccione una opcion</option>
               <option value="2">2</option>
               <option value="5">5</option>
               <option value="7">7</option>
             </select>
+            <div class="invalid-feedback">Por favor seleccione cantidad de asientos</div>
             <!-- tapizado section -->
             <div class="segundo_titulo-simulador" style="padding: 10px 0px">
               <h2>Tipo de tapizado</h2>
@@ -120,70 +106,98 @@
                 class="form-select w-50"
                 name="tipo de tapizado"
                 id="textura"
+                onchange="limpiarValidacion('textura')"
               ></select>
+              <div class="invalid-feedback">Por favor seleccione tipo de tapizado</div>
             </div>
 
             <!-- Color de tapizado -->
-            <label for="cars">Color de tapizado</label>
-            <select
-              class="form-select w-50"
-              name="tipo de color tapizado"
-              id="colorTapizado"
-            >
-              <option value="nada">Seleccione una opcion</option>
-              <option value="negro">Negro</option>
-              <option value="blanco">Blanco</option>
-              <option value="crema">Crema</option>
-              <option value="grafito">Grafito</option>
-              <option value="gris">Gris</option>
-              <option value="combinado">Combinado</option>
-            </select>
-
+            <div>
+              <label for="cars">Color de tapizado</label>
+              <select
+                class="form-select w-50"
+                name="tipo de color tapizado"
+                id="colorTapizado"
+                onchange="limpiarValidacion('colorTapizado')"
+              >
+                <option value="nada">Seleccione una opcion</option>
+                <option value="negro">Negro</option>
+                <option value="blanco">Blanco</option>
+                <option value="crema">Crema</option>
+                <option value="grafito">Grafito</option>
+                <option value="gris">Gris</option>
+                <option value="combinado">Combinado</option>
+              </select>
+              <div class="invalid-feedback">Por favor seleccione un color de tapizado</div>
+            </div>
             <!-- Costura -->
-            <div
-              class="segundo_titulo-simulador"
-              style="padding: 10px 0px"
-            ></div>
+            <div class="segundo_titulo-simulador" style="padding: 10px 0px"></div>
             <h2>Tipo de Costura</h2>
-            <label for="cars">Estilo de costura</label>
-            <select
-              class="form-select w-50"
-              name="estilo de costura"
-              id="estiloDeCostura"
-            >
-              <option value="nada">Seleccione una opcion</option>
-              <option value="simpleRecta">Simple/ Recta</option>
-              <option value="dobleDobleRecta">Doble/ Doble recta</option>
-              <option value="zigzag">Zigzag</option>
-              <option value="punto">Tejido de punto</option>
-            </select>
-
-            <label for="cars">Color Costura</label>
-            <select
-              class="form-select w-50"
-              name="color costura"
-              id="colorCostura"
-            >
-              <option value="nada">Seleccione una opcion</option>
-              <option value="negrosCostura">Negro</option>
-              <option value="blancoCostura">Blanco</option>
-              <option value="cremaCostura">Crema</option>
-              <option value="grafitoCostura">Grafito</option>
-              <option value="grisCostura">Gris</option>
-              <option value="combinadoCostura">Combinado</option>
-            </select>
+            <div>
+              <label for="cars">Estilo de costura</label>
+              <select
+                class="form-select w-50"
+                name="estilo de costura"
+                id="estiloDeCostura"
+                onchange="limpiarValidacion('estiloDeCostura')"
+              >
+                <option value="nada">Seleccione una opcion</option>
+                <option value="simpleRecta">Simple/ Recta</option>
+                <option value="dobleDobleRecta">Doble/ Doble recta</option>
+                <option value="zigzag">Zigzag</option>
+                <option value="punto">Tejido de punto</option>
+              </select>
+              <div class="invalid-feedback">Por favor seleccione un tipo de costura</div>
+            </div>
+            <div>
+              <label for="cars">Color Costura</label>
+              <select
+                class="form-select w-50"
+                name="color costura"
+                id="colorCostura"
+                onchange="limpiarValidacion('colorCostura')"
+              >
+                <option value="nada">Seleccione una opcion</option>
+                <option value="negrosCostura">Negro</option>
+                <option value="blancoCostura">Blanco</option>
+                <option value="cremaCostura">Crema</option>
+                <option value="grafitoCostura">Grafito</option>
+                <option value="grisCostura">Gris</option>
+                <option value="combinadoCostura">Combinado</option>
+              </select>
+              <div class="invalid-feedback">Por favor seleccione un color de costura</div>
+            </div>
           </form>
         </div>
+
         <!-- carrito de compras -->
         <div class="col-md-6">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Mis datos</span>
+            <span class="badge badge-secondary badge-pill">3</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <small class="text-muted">Email</small>
+              <div id="email"></div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <small class="text-muted">Nombre</small>
+              <div id="nombre"></div>
+            </li>
+            <div>
+              <button type="button" class="btn btn-outline-secondary btn-sm" style="margin: 10px" onclick="logout()">
+                Log out
+              </button>
+            </div>
+          </ul>
+
           <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-muted">Presupuesto</span>
             <span class="badge badge-secondary badge-pill">3</span>
           </h4>
           <ul class="list-group mb-3">
-            <li
-              class="list-group-item d-flex justify-content-between lh-condensed"
-            >
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
               <div>
                 <h6 class="my-0">Sub-total</h6>
                 <small class="text-muted">Precio sin descuento</small>
@@ -207,23 +221,40 @@
       </div>
       <!-- Submit button -->
       <div class="cotizador_button">
-        <button
-          type="button"
-          class="btn btn-secondary"
-          onclick="hacerPresupuesto()"
-        >
-          Calcular
-        </button>
+        <button type="button" class="btn btn-secondary" onclick="hacerPresupuesto()">Calcular</button>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" />
+                <div id="emailHelp" class="form-text">Email que utilizo al registrarse</div>
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword" />
+                <div class="invalid-feedback">Email o password invalido</div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" onclick="login()">Log in</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- Inicio footer -->
     <footer class="container-fluid">
       <div class="footer-logo bs-primary">
         <a href="/index.html">
-          <img
-            src="./imagenes/resize_122687708_168534678234197_1058013072474963530_n-2-2.jpg"
-            alt="JP Cueros"
-          />
+          <img src="./imagenes/resize_122687708_168534678234197_1058013072474963530_n-2-2.jpg" alt="JP Cueros" />
         </a>
       </div>
       <div class="footer-map-section">
@@ -243,11 +274,7 @@
         </p>
         <p>Dias y Horarios: Lu-Vi de 8:30AM a 6:00PM</p>
         <p>
-          <img
-            class="icon"
-            src="./imagenes/envelope-regular.svg"
-            alt="email-icon"
-          />
+          <img class="icon" src="./imagenes/envelope-regular.svg" alt="email-icon" />
           Email:
           <a href="mailto:jorgepennisi@yahoo.com">jorgepennisi@yahoo.com</a>
         </p>
@@ -256,27 +283,12 @@
           <a href="./contactanos.html#Formulario">Ir a pagina de contacto</a>
         </p>
         <p>
-          <img
-            class="icon"
-            src="./imagenes/instagram.svg"
-            alt="instagram-icon"
-          />
-          <a
-            href="https://www.instagram.com/jptapizados/?hl=es"
-            target="_blank"
-          >
-            Instagram
-          </a>
+          <img class="icon" src="./imagenes/instagram.svg" alt="instagram-icon" />
+          <a href="https://www.instagram.com/jptapizados/?hl=es" target="_blank"> Instagram </a>
         </p>
         <p>
-          <img
-            class="icon"
-            src="./imagenes/facebook-f.svg"
-            alt="facebook-icon"
-          />
-          <a href="https://www.facebook.com/JpCueros" target="_blank">
-            Facebook
-          </a>
+          <img class="icon" src="./imagenes/facebook-f.svg" alt="facebook-icon" />
+          <a href="https://www.facebook.com/JpCueros" target="_blank"> Facebook </a>
         </p>
       </div>
     </footer>

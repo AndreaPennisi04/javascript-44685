@@ -9,45 +9,43 @@ const precioMetroCuadradoTextura = {
   cuerina: { precio: 10, label: "Cuerina" },
 };
 
+const usuarios = {
+  "andreapennisi04@gmail.com": { password: "12345678", displayName: "Andrea Pennisi" },
+};
+
+const loginModal = new bootstrap.Modal(document.getElementById("loginModal"), {
+  keyboard: false,
+  backdrop: "static",
+});
+
 let texturaHTML = Object.keys(precioMetroCuadradoTextura).map((key) => {
   return `<option value= "${key}" > ${precioMetroCuadradoTextura[key].label}</option>`;
 });
 
-texturaHTML = [
-  `<option value="nada">Seleccione una opcion</option>`,
-  ...texturaHTML,
-];
+texturaHTML = [`<option value="nada">Seleccione una opcion</option>`, ...texturaHTML];
 
 window.document.getElementById("textura").innerHTML = texturaHTML.join("");
 
 const metrosCuadradosMinimo = 5;
 const metrosCuadradosMaximo = 12;
-const metrosCuadradoPromedioPorAsiento =
-  (metrosCuadradosMinimo + metrosCuadradosMaximo) / 2;
+const metrosCuadradoPromedioPorAsiento = (metrosCuadradosMinimo + metrosCuadradosMaximo) / 2;
 
 function factorDePrecioPorColor(color) {
   switch (color) {
     case "negro":
       return 1;
-      break;
     case "blanco":
       return 1.5;
-      break;
     case "crema":
       return 2;
-      break;
     case "grafito":
       return 1;
-      break;
     case "gris":
       return 1.2;
-      break;
     case "combinado":
       return 2.5;
-      break;
     default:
       return 0;
-      break;
   }
 }
 
@@ -62,23 +60,17 @@ const factorDePrecioPorColorCostura = (colorCostura) => {
   switch (colorCostura) {
     case "negrosCostura":
       return 1.1;
-      break;
     case "cremaCostura":
     case "blancoCostura":
       return 1.15;
-      break;
     case "grafitoCostura":
       return 1.2;
-      break;
     case "grisCostura":
       return 1.18;
-      break;
     case "combinadoCostura":
       return 1.25;
-      break;
     default:
       return 0;
-      break;
   }
 };
 
@@ -86,54 +78,101 @@ function validarCupon(descuento) {
   switch (descuento) {
     case "FELIZNAVIDAD":
       return 5;
-      break;
     case "FELIZANIONUEVO":
       return 15;
-      break;
     case "BLACKFRIDAY":
       return 10;
-      break;
     default:
       return 0;
-      break;
   }
 }
 
+function limpiarValidacion(name) {
+  const element = window.document.getElementById(name);
+  if (element.value !== "nada") {
+    element.classList.remove("is-invalid");
+  }
+}
+
+function validarFormulario() {
+  const estiloDeCostura = window.document.getElementById("estiloDeCostura");
+  const colorCostura = window.document.getElementById("colorCostura");
+  const asientos = window.document.getElementById("asientos");
+  const textura = window.document.getElementById("textura");
+  const colorTapizado = window.document.getElementById("colorTapizado");
+  let hayError = false;
+
+  estiloDeCostura.classList.remove("is-invalid");
+  colorCostura.classList.remove("is-invalid");
+  asientos.classList.remove("is-invalid");
+  textura.classList.remove("is-invalid");
+  colorTapizado.classList.remove("is-invalid");
+
+  if (estiloDeCostura.value === "nada") {
+    estiloDeCostura.classList.add("is-invalid");
+    hayError = true;
+  }
+  if (colorCostura.value === "nada") {
+    colorCostura.classList.add("is-invalid");
+    hayError = true;
+  }
+  if (asientos.value === "nada") {
+    asientos.classList.add("is-invalid");
+    hayError = true;
+  }
+  if (textura.value === "nada") {
+    textura.classList.add("is-invalid");
+    hayError = true;
+  }
+  if (colorTapizado.value === "nada") {
+    colorTapizado.classList.add("is-invalid");
+    hayError = true;
+  }
+
+  return hayError;
+}
+
+function login() {
+  const email = window.document.getElementById("inputEmail").value;
+  const password = window.document.getElementById("inputPassword");
+  const user = usuarios[email];
+  if (user && user.password === password.value) {
+    localStorage.setItem(
+      "user",
+      JSON.stringify({
+        email: email,
+        displayName: user.displayName,
+      })
+    );
+    window.document.getElementById("nombre").innerText = user.displayName;
+    window.document.getElementById("email").innerText = email;
+    loginModal.hide();
+  } else {
+    password.classList.add("is-invalid");
+  }
+}
+
+function logout() {
+  localStorage.removeItem("user");
+  window.document.getElementById("nombre").innerText = "";
+  window.document.getElementById("email").innerText = "";
+  loginModal.show();
+}
+
 function hacerPresupuesto() {
-  const estiloDeCostura =
-    window.document.getElementById("estiloDeCostura").value;
-  if (estiloDeCostura === "nada") {
-    alert("Seleccione estilo de costura");
-    return;
-  }
-
-  const colorCostura = window.document.getElementById("colorCostura").value;
-  if (colorCostura === "nada") {
-    alert("Seleccione color de costura");
-    return;
-  }
-
   const cuponDeDescuento = window.document.getElementById("cupon").value;
   const descuento = validarCupon(cuponDeDescuento);
   window.document.getElementById("descuento").innerHTML = descuento;
 
+  if (!validarFormulario()) {
+    return;
+  }
+
+  const estiloDeCostura = window.document.getElementById("estiloDeCostura").value;
+  const colorCostura = window.document.getElementById("colorCostura").value;
   const asientos = window.document.getElementById("asientos").value;
-  if (asientos === "nada") {
-    alert("Seleccione cantidad de asientos");
-    return;
-  }
-
   const textura = window.document.getElementById("textura").value;
-  if (textura === "nada") {
-    alert("Seleccione textura");
-    return;
-  }
-
   const colorTapizado = window.document.getElementById("colorTapizado").value;
-  if (colorTapizado === "nada") {
-    alert("Seleccione color de tapizado");
-    return;
-  }
 
   let precioSubTotal =
     precioMetroCuadradoTextura[textura].precio *
@@ -151,4 +190,13 @@ function hacerPresupuesto() {
 
   window.document.getElementById("sub-total").innerHTML = precioSubTotal;
   window.document.getElementById("total").innerHTML = precioTotal;
+}
+
+const userItem = localStorage.getItem("user");
+if (!userItem) {
+  loginModal.show();
+} else {
+  const user = JSON.parse(userItem);
+  window.document.getElementById("nombre").innerText = user.displayName;
+  window.document.getElementById("email").innerText = user.email;
 }

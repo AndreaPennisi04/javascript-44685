@@ -100,7 +100,7 @@ function validarFormulario() {
   const asientos = window.document.getElementById("asientos");
   const textura = window.document.getElementById("textura");
   const colorTapizado = window.document.getElementById("colorTapizado");
-  let hayError = false;
+  let formValido = true;
 
   estiloDeCostura.classList.remove("is-invalid");
   colorCostura.classList.remove("is-invalid");
@@ -110,26 +110,26 @@ function validarFormulario() {
 
   if (estiloDeCostura.value === "nada") {
     estiloDeCostura.classList.add("is-invalid");
-    hayError = true;
+    formValido = false;
   }
   if (colorCostura.value === "nada") {
     colorCostura.classList.add("is-invalid");
-    hayError = true;
+    formValido = false;
   }
   if (asientos.value === "nada") {
     asientos.classList.add("is-invalid");
-    hayError = true;
+    formValido = false;
   }
   if (textura.value === "nada") {
     textura.classList.add("is-invalid");
-    hayError = true;
+    formValido = false;
   }
   if (colorTapizado.value === "nada") {
     colorTapizado.classList.add("is-invalid");
-    hayError = true;
+    formValido = false;
   }
 
-  return hayError;
+  return formValido;
 }
 
 function login() {

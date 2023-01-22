@@ -7,7 +7,7 @@
 .content {
   &_servicios-parent {
     &_header-servicios {
-      @include encabezado('../../imagenes/mercedes.jpg', bottom);
+      @include encabezado('../imagenes/mercedes.jpg', bottom);
     }
     &_header-text {
       text-align: justify;
@@ -26,7 +26,7 @@
       }
       &_imagen-1 {
         @include imagen5050(
-          '../../imagenes/upholstery-leather-hides-1024x453.jpg',
+          '../imagenes/upholstery-leather-hides-1024x453.jpg',
           right,
           right,
           white
@@ -37,7 +37,7 @@
       }
       &_imagen-2 {
         @include imagen5050(
-          '../../imagenes/40733.jpg',
+          '../imagenes/40733.jpg',
           right,
           left,
           $background-light
@@ -63,7 +63,7 @@
       }
       &_imagen-4 {
         @include imagen5050(
-          '../../imagenes/soporte-tecnico.jpg',
+          '../imagenes/soporte-tecnico.jpg',
           right,
           left,
           $background-light

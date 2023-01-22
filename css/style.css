@@ -8500,7 +8500,7 @@ footer {
 
 /* Fin Nav bar */
 .background-image-in-error-page {
-  background-image: url("../../imagenes/tapiceria-coche-asientos.jpg");
+  background-image: url("../imagenes/tapiceria-coche-asientos.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -8543,7 +8543,7 @@ h1, .h1 {
   text-align: center; }
 
 .contact-page-header {
-  background: linear-gradient(to left, rgba(255, 255, 255, 0) 2%, #bdbdbd), url("../../imagenes/dsc03888.jpg");
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 2%, #bdbdbd), url("../imagenes/dsc03888.jpg");
   background-position: bottom;
   background-color: #b1b8bd;
   background-size: cover;
@@ -8625,7 +8625,7 @@ div.gallery ul li img:hover {
   left: 65%; }
 
 .header-galeria {
-  background: linear-gradient(to left, rgba(255, 255, 255, 0) 2%, #bdbdbd), url("../../imagenes/img-0011.jpg");
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 2%, #bdbdbd), url("../imagenes/img-0011.jpg");
   background-position: bottom;
   background-color: #b1b8bd;
   background-size: cover;
@@ -8659,7 +8659,7 @@ div.gallery ul li img:hover {
     color: black; } }
 
 .section1 {
-  background-image: url("../../imagenes/bentley.jpg");
+  background-image: url("../imagenes/bentley.jpg");
   background-size: cover;
   background-position: center;
   height: 90vh; }
@@ -8690,7 +8690,7 @@ div.gallery ul li img:hover {
   -moz-box-shadow: 3px 3px 17px -3px rgba(0, 0, 0, 0.75); }
 
 .diseno-a-medida-img {
-  background-image: url("../../imagenes/diseno-harley.jpg");
+  background-image: url("../imagenes/diseno-harley.jpg");
   height: 700px;
   background-size: cover; }
 
@@ -8703,20 +8703,20 @@ div.gallery ul li img:hover {
 
 .seccion-carousel-image-1 {
   height: 80vh;
-  background-image: url("../../imagenes/peugeot-bronco.jpg");
+  background-image: url("../imagenes/peugeot-bronco.jpg");
   background-size: cover;
   background-position: center;
   z-index: 0; }
 
 .seccion-carousel-image-2 {
   height: 80vh;
-  background-image: url("../../imagenes/interior-yate.jpg");
+  background-image: url("../imagenes/interior-yate.jpg");
   background-size: cover;
   z-index: 0; }
 
 .seccion-carousel-image-3 {
   height: 80vh;
-  background-image: url("../../imagenes/moto-harley-davinson.jpg");
+  background-image: url("../imagenes/moto-harley-davinson.jpg");
   background-size: cover;
   background-position: 88%;
   z-index: 0; }
@@ -8725,7 +8725,7 @@ div.gallery ul li img:hover {
   background-color: #d9d9d9; }
 
 .content_servicios-parent_header-servicios {
-  background: linear-gradient(to left, rgba(255, 255, 255, 0) 5%, #bdbdbd), url("../../imagenes/mercedes.jpg");
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 5%, #bdbdbd), url("../imagenes/mercedes.jpg");
   background-color: #b1b8bd;
   background-size: cover;
   height: 500px;
@@ -8762,28 +8762,28 @@ div.gallery ul li img:hover {
       .content_servicios-parent_servicios-contenido_texto-1 {
         order: -1; } }
   .content_servicios-parent_servicios-contenido_imagen-1 {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 2%, white), url("../../imagenes/upholstery-leather-hides-1024x453.jpg");
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 2%, white), url("../imagenes/upholstery-leather-hides-1024x453.jpg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
     height: 800px; }
     @media only screen and (max-width: 768px) {
       .content_servicios-parent_servicios-contenido_imagen-1 {
-        background-image: url("../../imagenes/upholstery-leather-hides-1024x453.jpg");
+        background-image: url("../imagenes/upholstery-leather-hides-1024x453.jpg");
         width: 90vw;
         height: 200px;
         margin: 20px; } }
   .content_servicios-parent_servicios-contenido_texto-2 {
     padding: 40px; }
   .content_servicios-parent_servicios-contenido_imagen-2 {
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) 2%, #d9d9d9), url("../../imagenes/40733.jpg");
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 2%, #d9d9d9), url("../imagenes/40733.jpg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
     height: 800px; }
     @media only screen and (max-width: 768px) {
       .content_servicios-parent_servicios-contenido_imagen-2 {
-        background-image: url("../../imagenes/40733.jpg");
+        background-image: url("../imagenes/40733.jpg");
         width: 90vw;
         height: 200px;
         margin: 20px; } }
@@ -8808,14 +8808,14 @@ div.gallery ul li img:hover {
   .content_servicios-parent_servicios-contenido_texto-4 {
     padding: 40px; }
   .content_servicios-parent_servicios-contenido_imagen-4 {
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) 2%, #d9d9d9), url("../../imagenes/soporte-tecnico.jpg");
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 2%, #d9d9d9), url("../imagenes/soporte-tecnico.jpg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
     height: 800px; }
     @media only screen and (max-width: 768px) {
       .content_servicios-parent_servicios-contenido_imagen-4 {
-        background-image: url("../../imagenes/soporte-tecnico.jpg");
+        background-image: url("../imagenes/soporte-tecnico.jpg");
         width: 90vw;
         height: 200px;
         margin: 20px; } }
@@ -8847,7 +8847,7 @@ div.gallery ul li img:hover {
   text-align: start;
   text-align: justify; }
   .content_sobre-nosotros_header {
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) 5%, #bdbdbd), url("../../imagenes/tapiceria-coche-asientos.jpg");
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 5%, #bdbdbd), url("../imagenes/tapiceria-coche-asientos.jpg");
     background-color: #b1b8bd;
     background-size: cover;
     height: 500px;
@@ -8869,38 +8869,38 @@ div.gallery ul li img:hover {
       .content_sobre-nosotros_header {
         height: 250px; } }
   .content_sobre-nosotros_main_imagen-1 {
-    background-image: url("../../imagenes/dueno-de-la-fabrica.jpg");
+    background-image: url("../imagenes/dueno-de-la-fabrica.jpg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
     height: 800px; }
     @media only screen and (max-width: 768px) {
       .content_sobre-nosotros_main_imagen-1 {
-        background-image: url("../../imagenes/dueno-de-la-fabrica.jpg");
+        background-image: url("../imagenes/dueno-de-la-fabrica.jpg");
         width: 90vw;
         height: 200px;
         margin: 20px; } }
   .content_sobre-nosotros_main_imagen-2 {
-    background-image: url("../../imagenes/volante-en-marronjpg.jpg");
+    background-image: url("../imagenes/volante-en-marronjpg.jpg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
     height: 800px; }
     @media only screen and (max-width: 768px) {
       .content_sobre-nosotros_main_imagen-2 {
-        background-image: url("../../imagenes/volante-en-marronjpg.jpg");
+        background-image: url("../imagenes/volante-en-marronjpg.jpg");
         width: 90vw;
         height: 200px;
         margin: 20px; } }
   .content_sobre-nosotros_main_imagen-3 {
-    background-image: url("../../imagenes/vw.jpg");
+    background-image: url("../imagenes/vw.jpg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
     height: 800px; }
     @media only screen and (max-width: 768px) {
       .content_sobre-nosotros_main_imagen-3 {
-        background-image: url("../../imagenes/vw.jpg");
+        background-image: url("../imagenes/vw.jpg");
         width: 90vw;
         height: 200px;
         margin: 20px; } }

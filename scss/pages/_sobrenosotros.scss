@@ -14,19 +14,19 @@
     text-align: justify;
     &_header {
       @include encabezado(
-        '../../imagenes/tapiceria-coche-asientos.jpg',
+        '../imagenes/tapiceria-coche-asientos.jpg',
         center
       );
     }
     &_main {
       &_imagen-1 {
-        @include imagen5050('../../imagenes/dueno-de-la-fabrica.jpg', right);
+        @include imagen5050('../imagenes/dueno-de-la-fabrica.jpg', right);
       }
       &_imagen-2 {
-        @include imagen5050('../../imagenes/volante-en-marronjpg.jpg', right);
+        @include imagen5050('../imagenes/volante-en-marronjpg.jpg', right);
       }
       &_imagen-3 {
-        @include imagen5050('../../imagenes/vw.jpg', right);
+        @include imagen5050('../imagenes/vw.jpg', right);
       }
       &_texto-1 {
         padding: 40px;

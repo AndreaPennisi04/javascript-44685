@@ -29,7 +29,7 @@ $carousel-dark-caption-color: $black;
 $carousel-dark-control-icon-filter: invert(1) grayscale(100);
 
 .section1 {
-  background-image: url('../../imagenes/bentley.jpg');
+  background-image: url('../imagenes/bentley.jpg');
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -65,7 +65,7 @@ $carousel-dark-control-icon-filter: invert(1) grayscale(100);
 }
 
 .diseno-a-medida-img {
-  background-image: url('../../imagenes/diseno-harley.jpg');
+  background-image: url('../imagenes/diseno-harley.jpg');
   height: 700px;
   background-size: cover;
 }
@@ -83,20 +83,20 @@ $carousel-dark-control-icon-filter: invert(1) grayscale(100);
 .seccion-carousel {
   &-image-1 {
     height: 80vh;
-    background-image: url('../../imagenes/peugeot-bronco.jpg');
+    background-image: url('../imagenes/peugeot-bronco.jpg');
     background-size: cover;
     background-position: center;
     z-index: 0;
   }
   &-image-2 {
     height: 80vh;
-    background-image: url('../../imagenes/interior-yate.jpg');
+    background-image: url('../imagenes/interior-yate.jpg');
     background-size: cover;
     z-index: 0;
   }
   &-image-3 {
     height: 80vh;
-    background-image: url('../../imagenes/moto-harley-davinson.jpg');
+    background-image: url('../imagenes/moto-harley-davinson.jpg');
     background-size: cover;
     background-position: 88%;
     z-index: 0;

@@ -201,7 +201,7 @@ function checkearSiLogin() {
   }
 }
 
-fetch("./data/baseDeDatos.json")
+fetch("baseDeDatos.json")
   .then((response) => {
     return response.json();
   })

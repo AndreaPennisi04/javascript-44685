@@ -201,7 +201,7 @@ function checkearSiLogin() {
   }
 }
 
-fetch("baseDeDatos.json")
+fetch("https://andreapennisi04.github.io/javascript-44685/data/baseDeDatos.json")
   .then((response) => {
     return response.json();
   })

@@ -1,6 +1,10 @@
 const moneda = "USD";
 const metrosCuadradosMinimo = 5;
 const metrosCuadradosMaximo = 12;
+const urlBase =
+  window.location.hostname === ("localhost" || "127.0.0.1")
+    ? "../data/baseDeDatos.json"
+    : "https://andreapennisi04.github.io/javascript-44685/data/baseDeDatos.json";
 const metrosCuadradoPromedioPorAsiento = (metrosCuadradosMinimo + metrosCuadradosMaximo) / 2;
 let precioMetroCuadradoTextura = {};
 let usuarios = {};
@@ -10,6 +14,21 @@ const loginModal = new bootstrap.Modal(document.getElementById("loginModal"), {
   keyboard: false,
   backdrop: "static",
 });
+
+cargarDesdeBaseDeDatos(urlBase);
+
+function cargarDesdeBaseDeDatos(urlBaseDeDatosMock) {
+  fetch(urlBaseDeDatosMock)
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      usuarios = json.usuarios;
+      checkearSiLogin();
+      cargarTextura(json.preciosCuero);
+    })
+    .catch((error) => console.error(error));
+}
 
 // armo dinamicamente el drop down de precio metro cuadrado textura
 function cargarTextura(texturas) {
@@ -200,14 +219,3 @@ function checkearSiLogin() {
     window.document.getElementById("email").innerText = user.email;
   }
 }
-
-fetch("https://andreapennisi04.github.io/javascript-44685/data/baseDeDatos.json")
-  .then((response) => {
-    return response.json();
-  })
-  .then((json) => {
-    usuarios = json.usuarios;
-    checkearSiLogin();
-    cargarTextura(json.preciosCuero);
-  })
-  .catch((error) => console.error(error));

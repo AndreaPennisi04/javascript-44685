@@ -1,34 +1,25 @@
 const moneda = "USD";
-const precioMetroCuadradoTextura = {
-  liso: { precio: 20, label: "Cuero Liso" },
-  arrugado: { precio: 30, label: "Cuero Texturado" },
-  poroso: { precio: 20, label: "Cuero Poroso" },
-  perforado: { precio: 25, label: "Cuero Perforado" },
-  micorPerforado: { precio: 35, label: "Cuero Micro-Perforado" },
-  combinado: { precio: 40, label: "Cuero Combinado" },
-  cuerina: { precio: 10, label: "Cuerina" },
-};
+const metrosCuadradosMinimo = 5;
+const metrosCuadradosMaximo = 12;
+const metrosCuadradoPromedioPorAsiento = (metrosCuadradosMinimo + metrosCuadradosMaximo) / 2;
+let precioMetroCuadradoTextura = {};
+let usuarios = {};
 
-const usuarios = {
-  "andreapennisi04@gmail.com": { password: "12345678", displayName: "Andrea Pennisi" },
-};
-
+// buscamos el modal de login de bootstrap y lo guardamos en una variable
 const loginModal = new bootstrap.Modal(document.getElementById("loginModal"), {
   keyboard: false,
   backdrop: "static",
 });
 
-let texturaHTML = Object.keys(precioMetroCuadradoTextura).map((key) => {
-  return `<option value= "${key}" > ${precioMetroCuadradoTextura[key].label}</option>`;
-});
-
-texturaHTML = [`<option value="nada">Seleccione una opcion</option>`, ...texturaHTML];
-
-window.document.getElementById("textura").innerHTML = texturaHTML.join("");
-
-const metrosCuadradosMinimo = 5;
-const metrosCuadradosMaximo = 12;
-const metrosCuadradoPromedioPorAsiento = (metrosCuadradosMinimo + metrosCuadradosMaximo) / 2;
+// armo dinamicamente el drop down de precio metro cuadrado textura
+function cargarTextura(texturas) {
+  precioMetroCuadradoTextura = texturas;
+  let texturaHTML = Object.keys(texturas).map((key) => {
+    return `<option value= "${key}" > ${texturas[key].label}</option>`;
+  });
+  texturaHTML = [`<option value="nada">Seleccione una opcion</option>`, ...texturaHTML];
+  window.document.getElementById("textura").innerHTML = texturaHTML.join("");
+}
 
 function factorDePrecioPorColor(color) {
   switch (color) {
@@ -147,6 +138,13 @@ function login() {
     window.document.getElementById("nombre").innerText = user.displayName;
     window.document.getElementById("email").innerText = email;
     loginModal.hide();
+    Toastify({
+      text: `Biendvenido/a ${user.displayName}`,
+      className: "info",
+      style: {
+        background: "linear-gradient(to right, #ff0000, #96c93d)",
+      },
+    }).showToast();
   } else {
     password.classList.add("is-invalid");
   }
@@ -192,11 +190,24 @@ function hacerPresupuesto() {
   window.document.getElementById("total").innerHTML = precioTotal;
 }
 
-const userItem = localStorage.getItem("user");
-if (!userItem) {
-  loginModal.show();
-} else {
-  const user = JSON.parse(userItem);
-  window.document.getElementById("nombre").innerText = user.displayName;
-  window.document.getElementById("email").innerText = user.email;
+function checkearSiLogin() {
+  const userItem = localStorage.getItem("user");
+  if (!userItem) {
+    loginModal.show();
+  } else {
+    const user = JSON.parse(userItem);
+    window.document.getElementById("nombre").innerText = user.displayName;
+    window.document.getElementById("email").innerText = user.email;
+  }
 }
+
+fetch("../data/baseDeDatos.json")
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    usuarios = json.usuarios;
+    checkearSiLogin();
+    cargarTextura(json.preciosCuero);
+  })
+  .catch((error) => console.error(error));

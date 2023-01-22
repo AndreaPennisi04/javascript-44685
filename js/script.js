@@ -142,7 +142,7 @@ function login() {
       text: `Biendvenido/a ${user.displayName}`,
       className: "info",
       style: {
-        background: "linear-gradient(to right, #ff0000, #96c93d)",
+        background: "linear-gradient(to right, #ff0000, #A0A0A0)",
       },
     }).showToast();
   } else {
@@ -201,7 +201,7 @@ function checkearSiLogin() {
   }
 }
 
-fetch("../data/baseDeDatos.json")
+fetch("./data/baseDeDatos.json")
   .then((response) => {
     return response.json();
   })

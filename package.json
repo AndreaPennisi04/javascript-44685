@@ -8,7 +8,7 @@
     "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "clear": "rm -rf ./deploy",
-    "build-deploy": "rsync -av --progress ./ ./deploy --exclude node_modules/ --exclude .git/ --exclude package-lock.json --exclude package.json --exclude deploy/ --exclude plantilla.html  --exclude scss/ --exclude .gitignore --exclude .DS_Store",
+    "build-deploy": "rsync -av --progress ./ ./docs --exclude node_modules/ --exclude .git/ --exclude package-lock.json --exclude package.json --exclude deploy/ --exclude plantilla.html  --exclude scss/ --exclude .gitignore --exclude .DS_Store",
     "clear-bucket": "aws-vault exec andrea -- aws s3 rm s3://jpcueros-s3 --recursive",
     "upload-bucket": "aws-vault exec andrea -- aws s3 cp ./deploy s3://jpcueros-s3 --recursive",
     "deploy": "npm run build-css && npm run clear && npm run build-deploy && npm run clear-bucket && npm run upload-bucket"
